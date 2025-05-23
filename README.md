@@ -29,7 +29,8 @@ This project stores the primary raw data and analysis code used in this article.
 ├── 6.GBM.CNV           # Raw genotypic data for GBM, including different mutation types  
 │   ├── All.GBM.maf     # Raw genotype data for GBM  
 │   ├── GBM.CNV.rda     # CNV data obtained via GISTIC analysis for GBM  
-│   └── GBM.SNP.rda     # SNP data obtained via GISTIC analysis for GBM  
+│   └── GBM.SNP.rda     # SNP data obtained via GISTIC analysis for GBM
+│
 ├── plot.GBM.R          # Visualization of analysis results for GBM transcriptome and methylation data  
 ├── plot.LGG.R          # Visualization of analysis results for LGG transcriptome and methylation data  
 └── README.md
