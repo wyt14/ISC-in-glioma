@@ -16,10 +16,10 @@ label_data <- read.table("GBM.IDH.label.txt", header = FALSE, sep = "\t", string
 colnames(label_data) <- c("Sample", "IDH_Status")
 
 cluster_df <- data.frame("cluster" = group[colnames(NMF.Exp.rank)])
-label_df <- label_data  # 包含Sample和IDH_Status列
+label_df <- label_data  
 
 common_samples <- intersect(rownames(cluster_df), label_df$Sample)
-cluster_common <- cluster_df[common_samples, , drop = FALSE]  # drop=FALSE保持数据框结构
+cluster_common <- cluster_df[common_samples, , drop = FALSE]  
 label_common <- label_df[match(common_samples, label_df$Sample), ]
 names <- label_common[,1]
 label_common <- label_common[,2]
