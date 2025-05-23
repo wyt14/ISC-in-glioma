@@ -16,7 +16,7 @@ label_data <- read.table("LGG.IDH.label.txt", header = FALSE, sep = "\t", string
 colnames(label_data) <- c("Sample", "IDH_Status")
 
 cluster_df <- data.frame("cluster" = group[colnames(NMF.Exp.rank)])
-label_df <- label_data  # 包含Sample和IDH_Status列
+label_df <- label_data  
 
 clinical_data <- read.table("/data/wangyuting/8.glioma/LGG/clinical.project-tcga-lgg.2025-04-25/clinical.tsv", header = FALSE, sep = "\t", stringsAsFactors = FALSE)
 sex_data <- clinical_data[,c(10,22)]
@@ -27,13 +27,13 @@ colnames(cluster_df) <- c("Sample","cluster")
 colnames(sex_data)[1] <- "Sample"  
 sex_data_unique <- sex_data[!duplicated(sex_data$Sample), ]
 
-merged_data <- merge(cluster_df, label_df, by = "Sample", all = FALSE)  # all=FALSE 只保留共有样本
+merged_data <- merge(cluster_df, label_df, by = "Sample", all = FALSE)  
 final_data <- merge(merged_data, sex_data_unique, by = "Sample", all = TRUE)
 
 
 ann_colors <- list(
   IDH_Status = c("IDH-mut" = "black", "IDH-wt" = "grey"),
-  demographic.gender = c("male" = "blue", "female" = "pink")  # 连续变量用colorRampPalette
+  demographic.gender = c("male" = "blue", "female" = "pink")  
 )
 
 pdf("consensus.pdf")
