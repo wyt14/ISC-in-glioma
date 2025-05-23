@@ -31,8 +31,8 @@ This project stores the primary raw data and analysis code used in this article.
 │   ├── GBM.CNV.rda     # CNV data obtained via GISTIC analysis for GBM  
 │   └── GBM.SNP.rda     # SNP data obtained via GISTIC analysis for GBM
 │
-├── plot.GBM.R          # Visualization of analysis results for GBM transcriptome and methylation data  
-├── plot.LGG.R          # Visualization of analysis results for LGG transcriptome and methylation data  
+├── GBM.R          # Visualization of analysis results for GBM transcriptome and methylation data  
+├── LGG.R          # Visualization of analysis results for LGG transcriptome and methylation data  
 └── README.md
 ```
 
